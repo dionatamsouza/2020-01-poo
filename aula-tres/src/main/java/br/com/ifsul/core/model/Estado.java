@@ -11,5 +11,11 @@ public class Estado {
 
     public Estado(Pais pais) {
         this.pais = pais;
-        }
+    }
+    
+    @Override
+    public String toString() {
+        return "Instancia: Estado [%s]", this.nome;
+    }
+    
 }
