@@ -6,6 +6,22 @@ public class Estado {
     private String nome;
     private String sigla;
     private Pais pais;
+    
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    
+    public void setSigla(String sigla){
+        this.sigla = sigla;
+    }
+    
+    public String getNome(){
+        return this.nome;
+    }
+
+    public String getSigla(){
+        return this.sigla;
+    }
 
     public Estado(){}
 
