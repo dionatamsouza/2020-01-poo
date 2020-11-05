@@ -28,6 +28,16 @@ public class Pais {
     public void setSigla(String sigla) {
         this.sigla = sigla;
     }
-
+    
+    @Override
+    public boolean equals(Object obj){
+        Pais outroPais = (Pais) obj;
+        return this.nome.equalsIgnoreCase(outroPais.getNome()) && this.sigla.equalsIgnoreCase(outroPais.getSigla()) ;
+    }
+    
+    @Override
+    public int hashCode(){
+        return this.nome.toLowerCase().charAt(0) + this.nome.toLowerCase().charAt(0);
+    }
 
 }
