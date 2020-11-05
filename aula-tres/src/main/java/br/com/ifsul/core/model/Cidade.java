@@ -39,10 +39,6 @@ public class Cidade {
         this.estado = estado;
     }
     
-    
-    
-    
-    
     @Override
     public boolean equals(Object o){
         if ( this == o )
@@ -55,8 +51,10 @@ public class Cidade {
         return Objects.equals(this.nome, cidade.nome) && Objects.equals(this.sigla, cidade.sigla) && Objects.equals(this.estado, cidade.estado);
     }
     
-    
-    
+    @Override
+    public int hashCode(){
+        return Objects.hash(this.nome, this.sigla, this.estado);
+    }
     
     @Override
     public String toString() {
