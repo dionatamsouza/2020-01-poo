@@ -1,6 +1,8 @@
 package br.com.ifsul.core.model;
 
 
+import java.util.Objects;
+
 public class Cidade {
 
     private String nome;
@@ -36,6 +38,24 @@ public class Cidade {
     public Cidade(Estado estado) {
         this.estado = estado;
     }
+    
+    
+    
+    
+    
+    @Override
+    public boolean equals(Object o){
+        if ( this == o )
+            return true;
+        if ( o==null || this.getClass() != o.getClass() )
+            return false;
+        
+        Cidade cidade = (Cidade) o;
+        return Objects.equals(this.nome, cidade.nome) && Objects.equals(this.sigla, cidade.sigla) && Objects.equals(this.estado, cidade.estado);
+    }
+    
+    
+    
     
     @Override
     public String toString() {
